@@ -8,10 +8,8 @@ soup_object = BeautifulSoup(r, 'html.parser')
 heading = soup_object.select('.titleline > a')
 pts = soup_object.select('.subtext')
 
-
 def sort_hn(hnlist):
 	return sorted(hnlist, key = lambda k:k['votes'], reverse = True)
-
 
 def req_hn(heading,pts):
 	news = []
@@ -25,6 +23,8 @@ def req_hn(heading,pts):
 				news.append({'title': title, 'links': href, 'votes': vote})
 	return sort_hn(news)
 
+	
+	
 
 
 pprint.pprint(req_hn(heading,pts)) 
