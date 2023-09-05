@@ -24,9 +24,6 @@ def req_hn(heading,pts):
 	return sort_hn(news)
 
 	
-	
-
-
 pprint.pprint(req_hn(heading,pts)) 
 	    
 	
